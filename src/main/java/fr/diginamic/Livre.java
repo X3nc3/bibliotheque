@@ -33,6 +33,42 @@ public class Livre {
         this.id = id;
     }
 
+    /**
+     * Getter
+     *
+     * @return titre
+     */
+    public String getTitre() {
+        return titre;
+    }
+
+    /**
+     * Setter
+     *
+     * @param titre titre
+     */
+    public void setTitre(String titre) {
+        this.titre = titre;
+    }
+
+    /**
+     * Getter
+     *
+     * @return auteur
+     */
+    public String getAuteur() {
+        return auteur;
+    }
+
+    /**
+     * Setter
+     *
+     * @param auteur auteur
+     */
+    public void setAuteur(String auteur) {
+        this.auteur = auteur;
+    }
+
     @Override
     public String toString() {
         return "Livre{" +
