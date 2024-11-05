@@ -2,15 +2,22 @@ package fr.diginamic;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name="livre")
 public class Livre {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private int id;
+    @Column(name = "TITRE", nullable = false)
     private String titre;
+    @Column(name = "AUTEUR", length = 50, nullable = false)
     private String auteur;
+    @ManyToMany(mappedBy = "livres")
+    private Set<Emprunt> emprunts;
 
     public Livre() {
     }
