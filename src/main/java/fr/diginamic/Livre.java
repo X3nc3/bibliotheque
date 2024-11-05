@@ -1,14 +1,13 @@
 package fr.diginamic;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name="livre")
 public class Livre {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String titre;
     private String auteur;
